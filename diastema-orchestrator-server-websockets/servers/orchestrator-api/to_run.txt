@@ -1,0 +1,11 @@
+docker build --tag orchestrator-api-image .
+
+docker run -p 127.0.0.1:4999:5000 ^
+--name orchestrator-api ^
+--restart always ^
+-e HOST=0.0.0.0 ^
+-e PORT=5000 ^
+-e DIASTEMA_KEY=diastema-key ^
+-e ORCHESTRATOR_HOST=host.docker.internal ^
+-e ORCHESTRATOR_PORT=5000 ^
+orchestrator-api-image
