@@ -1,3 +1,0 @@
-panos 22 500
-marianna 21 0
-stavroula 47 1200
